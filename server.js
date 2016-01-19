@@ -15,7 +15,7 @@ var server = module.exports = exports = http.createServer((req, res) => {
   }
 
   else if (req.method === 'POST' && req.url === '/greet') {
-    var result = ''
+    var result = '';
     req.on('data', function(chunk) {
       result += JSON.parse(chunk.toString()).msg;
     });
